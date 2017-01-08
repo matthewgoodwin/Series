@@ -1,4 +1,6 @@
-source 'https://rubygems.org'
+source 'https://rubygems.org'do
+  gem 'rails-assets-plugin'
+end
 
 ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
