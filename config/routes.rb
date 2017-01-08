@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: "pages#home"
+  resources :shows, only: [:show]
   get "contact", to: "pages#contact"
   get "about", to: "pages#about"
   get "search", to: "pages#search"
