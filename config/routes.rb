@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: "pages#home"
   resources :shows, only: [:show]
   get "contact", to: "pages#contact"

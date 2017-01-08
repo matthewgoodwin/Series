@@ -27,6 +27,8 @@ gem 'turbolinks', '~> 5'
 # below removed
 # gem 'jbuilder', '~> 2.5'
 
+gem "devise"
+
 #front end mods:
 gem "bootstrap-sass"
 gem "font-awesome-sass"
