@@ -1,0 +1,34 @@
+class UserShowsController < ApplicationController
+  before_action :find_usershow, only: [:show, :destroy]
+  def index
+    @usershow = UserShow.all
+    # @usershow = current_user.user_shows
+  end
+
+  def show
+  end
+
+  def new
+    @usershow = UserShow.new
+  end
+
+  def create
+    @usershow = UserShow.new(usershow_params)
+    @usershow.user = current_user
+    @usershow.save
+    redirect_to user_show_index_path(@usershow)
+  end
+
+  def destroy
+    @usershow.destroy
+  end
+
+private
+  def find_usershow
+    @usershow = UserShow.find(params[:id])
+  end
+
+  def usershow_params
+    params.require(:usershow).premit(:show_id)
+  end
+end

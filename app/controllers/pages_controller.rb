@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   end
 
   def search
+    #build the 'show' instance here
   end
 
   def shell
