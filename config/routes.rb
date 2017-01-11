@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'user_show/index'
+
+  get 'user_show/show'
+
+  get 'user_show/create'
+
+  get 'user_show/destroy'
+
   devise_for :users
   root to: "pages#home"
   resources :shows, only: [:show]
