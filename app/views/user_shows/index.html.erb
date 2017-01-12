@@ -1,2 +1,8 @@
 <h1>UserShows#index</h1>
 <p>Find me in app/views/user_shows/index.html.erb</p>
+
+<%= @usershow.each do |show|%>
+  <%= show.title %>
+  <%= show.runtime %>
+  <%= show.network %>
+<% end %>
