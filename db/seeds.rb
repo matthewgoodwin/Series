@@ -17,3 +17,10 @@ user_1 = User.create(email:"david@yahoo.com", username:"david1", firstname:"davi
 user_2 = User.create(email:"angela@yahoo.com", username:"angela1", firstname:"angela", lastname:"davis", password:"password")
 user_3 = User.create(email:"jake@yahoo.com", username:"jake1", firstname:"jake", lastname:"williams", password:"password")
 
+user_show_1 = UserShow.create(user: user_1, show: show_1)
+user_show_2 = UserShow.create(user: user_1, show: show_3)
+user_show_3 = UserShow.create(user: user_2, show: show_1)
+user_show_4 = UserShow.create(user: user_2, show: show_2)
+user_show_5 = UserShow.create(user: user_3, show: show_1)
+user_show_6 = UserShow.create(user: user_3, show: show_3)
+
