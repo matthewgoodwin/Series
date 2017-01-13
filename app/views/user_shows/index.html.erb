@@ -2,6 +2,8 @@
 <p>Find me in app/views/user_shows/index.html.erb</p>
 
 <% @usershows.each do |usershow| %>
-  <%= usershow.show.title %>
-  <%= usershow.show.imdb %>
+  <div>
+    <%= usershow.show.title %>
+    <%= usershow.show.imdb %>
+  </div>
 <% end %>
