@@ -8,19 +8,35 @@
 
 User.destroy_all
 Show.destroy_all
+UserShow.destroy_all
 
-show_1 = Show.create(title: "lost", imdb:"ttfrk345")
-show_2 = Show.create(title: "24", imdb:"lollmfao2")
-show_3 = Show.create(title: "real husbands of hollywood", imdb:"lollmfao2")
+show_1 = Show.create(title: "lost", poster:"lost.jpg", imdb:"ttfrk345")
+show_2 = Show.create(title: "24", poster:"24poster.jpg", imdb:"lollmfao2")
+show_3 = Show.create(title: "real husbands of hollywood", poster:"rhh.jpg", imdb:"lollmfao2")
+show_4 = Show.create(title: "3%", poster:"3per.jpg", imdb:"ppf454e3")
+show_5 = Show.create(title: "game of thrones", poster:"got.jpg", imdb:"ppf55667")
+show_6 = Show.create(title: "the legend of korra", poster:"korra.jpg", imdb:"ppfrer343")
+show_7 = Show.create(title: "mr.robot", poster:"robot.jpg", imdb:"ppf44544")
+show_8 = Show.create(title: "the silicon valley", poster:"siliconv.jpg", imdb:"ppf8989")
+show_9 = Show.create(title: "the IT crown", poster:"itcrowd.jpg", imdb:"ppf87hu88")
 
 user_1 = User.create(email:"david@yahoo.com", username:"david1", firstname:"david", lastname:"green", password:"password")
 user_2 = User.create(email:"angela@yahoo.com", username:"angela1", firstname:"angela", lastname:"davis", password:"password")
 user_3 = User.create(email:"jake@yahoo.com", username:"jake1", firstname:"jake", lastname:"williams", password:"password")
 
-user_show_1 = UserShow.create(user: user_1, show: show_1)
-user_show_2 = UserShow.create(user: user_1, show: show_3)
-user_show_3 = UserShow.create(user: user_2, show: show_1)
-user_show_4 = UserShow.create(user: user_2, show: show_2)
-user_show_5 = UserShow.create(user: user_3, show: show_1)
-user_show_6 = UserShow.create(user: user_3, show: show_3)
+user_show_1 = UserShow.create(user: user_1, show: show_4)
+user_show_2 = UserShow.create(user: user_1, show: show_5)
+user_show_3 = UserShow.create(user: user_1, show: show_7)
+user_show_4 = UserShow.create(user: user_1, show: show_8)
+user_show_5 = UserShow.create(user: user_1, show: show_9)
+
+user_show_6 = UserShow.create(user: user_2, show: show_3)
+user_show_7 = UserShow.create(user: user_2, show: show_2)
+user_show_8 = UserShow.create(user: user_2, show: show_5)
+user_show_9 = UserShow.create(user: user_2, show: show_8)
+
+user_show_10 = UserShow.create(user: user_3, show: show_1)
+user_show_11 = UserShow.create(user: user_3, show: show_2)
+user_show_12 = UserShow.create(user: user_3, show: show_3)
+user_show_13 = UserShow.create(user: user_3, show: show_4)
 

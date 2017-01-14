@@ -1,11 +1,16 @@
+<style>
+* {border: 1px solid red !important;}
+</style>
 <h1>UserShows#index</h1>
 <p>Find me in app/views/user_shows/index.html.erb</p>
 <h2>Welcome, <%= current_user.username %> </h2>
+
 <% @usershows.each do |usershow| %>
   <div>
+    <%= image_tag usershow.show.poster %>
     <%= usershow.show.title %>
     <%= usershow.show.imdb %>
     <%= usershow.show.id %>
-    <%= link_to "view show", user_show_path(usershow.show) %>
+    <%= link_to "view show", user_show_path(usershow) %>
   </div>
 <% end %>
