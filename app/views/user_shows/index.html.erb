@@ -3,11 +3,13 @@
 <h2>Welcome, <%= current_user.username %> </h2>
 
 <% @usershows.each do |usershow| %>
-  <div>
-    <%= image_tag usershow.show.poster %>
-    <%= usershow.show.title %>
-    <%= usershow.show.imdb %>
-    <%= usershow.show.id %>
-    <%= link_to "view show", user_show_path(usershow) %>
+  <div class="series-card">
+    <div class="series-pic"><%= image_tag usershow.show.poster %></div>
+    <div class="series-body">
+      <h3><%= usershow.show.title %></h3>
+      <p><%= usershow.show.summary %></p>
+      <p><%= usershow.show.imdb %></p>
+    </div>
+    <div><%= link_to "view show", user_show_path(usershow) %></div>
   </div>
 <% end %>
