@@ -13,3 +13,10 @@
 @import "components/index";
 @import "pages/index";
 @import "vendor/index";
+
+//aligns items inside the parent div
+.series-card{
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
