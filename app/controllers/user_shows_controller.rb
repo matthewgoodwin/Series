@@ -30,6 +30,6 @@ private
   end
 
   def usershow_params
-    params.require(:usershow).premit(:show_id)
+    params.require(:usershow).permit(:show_id)
   end
 end
