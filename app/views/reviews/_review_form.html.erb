@@ -1,0 +1,6 @@
+<%= simple_form_for [usershow, @review] do |f| %>
+  <%= f.input_field :phrase, label: false %>
+  <%= f.input :rating, label: false %>
+  <%= f.input :standout, label: false %>
+  <%= f.submit "add review" %>
+<% end %>

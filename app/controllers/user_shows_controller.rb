@@ -3,6 +3,7 @@ class UserShowsController < ApplicationController
   def index
     #@usershows = UserShow.all
     @usershows = current_user.user_shows
+    @review = Review.new
   end
 
   def show
