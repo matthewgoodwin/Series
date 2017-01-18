@@ -9,5 +9,6 @@ class User < ApplicationRecord
 
   has_many :user_shows, dependent: :destroy
   has_many :shows, through: :user_shows
+  has_many :reviews, through: :user_shows
 
 end
