@@ -1,22 +1,22 @@
 <h1>UserShows#index</h1>
 <p>Find me in app/views/user_shows/index.html.erb</p>
 <h2>Welcome, <%= current_user.username %> </h2>
-
-<% @usershows.each do |usershow| %>
-  <div class="series-card">
-    <div class="series-pic"><%= image_tag usershow.show.poster %></div>
-    <div class="series-body">
-      <h3><%= usershow.show.title %></h3>
-      <p><%= usershow.show.summary %></p>
-      <p><%= usershow.show.imdb %></p>
-      <%= simple_form_for [usershow, @review] do |f| %>
-        <%= f.input_field :phrase, label: false, placeholder: 'short review' %>
-        <%= f.input_field :rating, label: false, placeholder: '1-5'  %>
-        <%= f.input_field :standout, collection:["Season 1", "Season 2", "Season 3","Season 4","Season 5","Season 6","Season 7","Season 8","Season 9","Season 10"],label: false %>
-        <%= f.submit "add review" %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <% @usershows.each do |usershow| %>
+        <div class="series-card">
+          <div class="series-pic"><%= image_tag usershow.show.poster %></div>
+          <div class="series-body">
+            <h3><%= usershow.show.title %></h3>
+            <p><%= usershow.show.summary %></p>
+            <p><%= usershow.show.imdb %></p>
+            <%= render "reviews/review_form", user_show: usershow, review: @review %>
+          </div>
+          <div><%= link_to "view show", user_show_path(usershow) %></div>
+          <i class="fa fa-star-o"></i>
+        </div>
       <% end %>
-
     </div>
-    <div><%= link_to "view show", user_show_path(usershow) %></div>
   </div>
-<% end %>
+</div>
