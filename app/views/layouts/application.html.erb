@@ -9,10 +9,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <style>* {border: 1px solid red !important;}</style>
+   <!--  <style>* {border: 1px solid red !important;}</style> -->
   </head>
 
   <body>
-    <%= yield %>
+  <%= render "shared/navbar" %>
+    <div class="margin">
+      <%= yield %>
+    </div>
   </body>
 </html>
