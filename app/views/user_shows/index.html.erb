@@ -19,7 +19,7 @@
                     <h3 class="review-modal-header">Review for <%= usershow.show.title %></h3>
                   </div><!--end of header-->
                   <div class="modal-body">
-                    <%= render "reviews/review_form", :user_show => usershow, :review => @review %>
+                    <%= render "reviews/review_form", usershow: usershow, review: @review %>
                   </div><!--end of modal-body-->
                 </div><!--end of modal-content-->
               </div><!--end of modal-dialog-->
