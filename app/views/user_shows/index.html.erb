@@ -11,10 +11,22 @@
             <h3><%= usershow.show.title %></h3>
             <p><%= usershow.show.summary %></p>
             <p><%= usershow.show.imdb %></p>
-            <%= render "reviews/review_form", :user_show => usershow, :review => @review %>
-          </div>
+            <!--begin modal of review partial-->
+            <div class="modal fade" id="review-form">
+              <div class="modal-dialog" role="document"><!--aligns the modal document-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="review-modal-header">Review for <%= usershow.show.title %></h3>
+                  </div><!--end of header-->
+                  <div class="modal-body">
+                    <%= render "reviews/review_form", :user_show => usershow, :review => @review %>
+                  </div><!--end of modal-body-->
+                </div><!--end of modal-content-->
+              </div><!--end of modal-dialog-->
+            </div><!--end of modal-->
+          </div><!--end of series-body-->
           <div><%= link_to "view show", user_show_path(usershow) %></div>
-          <i class="fa fa-star-o"></i>
+          <i data-toggle="modal" data-target="#review-form" class="fa fa-star-o"></i>
         </div>
       <% end %>
     </div>

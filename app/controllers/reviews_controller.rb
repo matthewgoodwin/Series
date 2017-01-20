@@ -10,7 +10,12 @@ class ReviewsController < ApplicationController
 
   def create
     @review = @usershow.reviews.build(review_params)
-    @review.save
+    if @review.save
+      redirect_to user_shows_path(@usershow)
+    else
+      redirect_to user_shows_path(@usershow)
+    end
+
   end
 
   def edit

@@ -1,7 +1,9 @@
+
 <%= simple_form_for ([user_show, review]) do |f| %>
   <!--add raise here to inspect-->
   <%= f.input_field :phrase, label: false, placeholder: 'short review' %>
   <%= f.input_field :rating, label: false, placeholder: '1-5'  %>
-  <%= f.input_field :standout, collection:["Season 1", "Season 2", "Season 3","Season 4","Season 5","Season 6","Season 7","Season 8","Season 9","Season 10"],label: false %>
-  <%= f.submit "add review" %>
+  <%= f.input_field :standout, placeholder:'season', collection:["Season 1", "Season 2", "Season 3","Season 4","Season 5","Season 6","Season 7","Season 8","Season 9","Season 10"], label: false %>
+  <%= f.submit "add review" , html: {class: "btn btn-primary"}%>
 <% end %>
+
