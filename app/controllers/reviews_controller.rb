@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to user_shows_path(@usershow)
     else
-      redirect_to user_shows_path(@usershow)
+      redirect_to user_show_path(@usershow)
     end
 
   end
