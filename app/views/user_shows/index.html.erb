@@ -9,6 +9,14 @@
           <div class="series-pic"><%= image_tag usershow.show.poster %></div>
           <div class="series-body">
             <h3><%= usershow.show.title %></h3>
+
+            <div class="usershow-index-reviews-div">
+              <% if usershow.reviews.blank?  %>
+              <% else %>
+              <%= usershow.reviews.first.phrase  %>
+              <% end %>
+            </div>
+
             <p><%= usershow.show.summary %></p>
             <p><%= usershow.show.imdb %></p>
             <!--begin modal of review partial-->
