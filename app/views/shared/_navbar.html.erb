@@ -1,20 +1,20 @@
 <!-- <nav class="navbar navbar-default navbar-fixed-top">
 </nav>
  -->
-<div class="navbar-wagon navbar-wagon-fixed">
+<div class="navbar-series navbar-series-fixed">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
+  <a href="/" class="navbar-series-brand">
     <%= image_tag "series_logo2.png" %>
   </a>
 
   <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
+  <div class="navbar-series-right hidden-xs hidden-sm">
 
     <!-- Profile picture and dropdown -->
-    <div class="navbar-wagon-item">
+    <div class="navbar-series-item">
       <div class="dropdown">
-        <img src="http://placehold.it/50x50" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <img src="http://placehold.it/50x50" class="avatar dropdown-toggle" id="navbar-series-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-series-dropdown-menu">
           <li><a href="#">Profile</a></li>
           <li><a href="#">Dashboard</a></li>
           <li><%= link_to 'log out', destroy_user_session_path, method: :delete %></li>
@@ -25,10 +25,10 @@
   </div>
 
   <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
+  <div class="navbar-series-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+      <ul class="dropdown-menu dropdown-menu-right navbar-series-dropdown-menu">
         <li><a href="#">Some mobile link</a></li>
         <li><a href="#">Other one</a></li>
         <li><a href="#">Other one</a></li>

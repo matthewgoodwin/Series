@@ -1,5 +1,9 @@
 # README
 
+when using render with partials is it bad to pass instance variables as stated in the blog post:"Using instance variables in partials complicates the control flow, which facilitates bugs and makes reuse of partials more difficult".. however on the active record documentation:
+        http://api.rubyonrails.org/classes/ActionView/PartialRenderer.html
+    the examples given pass instance variables and objects in locals.. which is correct??? 
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
@@ -22,3 +26,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+

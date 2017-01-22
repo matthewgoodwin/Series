@@ -1,0 +1,14 @@
+/*changes made to the user_show index and show pages*/
+
+.series-card{
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  justify-content: space-around;
+  border: 2px solid white;
+  box-shadow: 1.5px 1.5px 9px #888888;
+}
+
+.series-body{
+  padding: 10px;
+}
