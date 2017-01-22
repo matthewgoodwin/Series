@@ -13,7 +13,11 @@
             <div class="usershow-index-reviews-div">
               <% if usershow.reviews.blank?  %>
               <% else %>
-              <%= usershow.reviews.first.phrase  %>
+                <div class="latest-review">
+                <p>latest review:</p>
+                <%= usershow.reviews.last.standout %>
+                <%= usershow.reviews.last.phrase  %>
+                </div>
               <% end %>
             </div>
 

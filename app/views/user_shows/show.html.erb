@@ -1,10 +1,14 @@
 <h1>UserShows#show</h1>
 <p>Find me in app/views/user_shows/show.html.erb</p>
 <p><%= link_to "back to index", user_shows_path %></p>
-<%= image_tag @usershow.show.poster %>
-<%= @usershow.show.title %>
-<p><%= @usershow.show.summary %></p>
-
+<div class="user-show-show-div">
+  <%= image_tag @usershow.show.poster %>
+  <%= @usershow.show.title %>
+  <div>
+<i data-toggle="modal" data-target="#review-form" class="fa fa-star-o"></i>
+</div>
+  <p><%= @usershow.show.summary %></p>
+</div><!--end of user-show-div-->
 <div class="usershow-index-reviews-div">
   <% if @usershow.reviews.blank?  %>
   <% else %>
@@ -14,9 +18,6 @@
   <% end %>
 </div><!--end of usershow-index-rev-div-->
 
-<div>
-<i data-toggle="modal" data-target="#review-form" class="fa fa-star-o"></i>
-</div>
 <div class="modal fade" id="review-form">
   <div class="modal-dialog" role="document"><!--aligns the modal document-->
     <div class="modal-content">
