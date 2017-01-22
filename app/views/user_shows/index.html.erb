@@ -4,6 +4,18 @@
       <h1>UserShows#index</h1>
       <p>Find me in app/views/user_shows/index.html.erb</p>
       <h2>Welcome, <%= current_user.username %></h2>
+
+      <div class="search-div">
+        <!-- search -->
+        <h2>find a series</h2>
+        <%= simple_form_for :series, method: :get, url: search_path do |f|%>
+        <%= f.input_field :title, input_html: {class: 'chosen-select form-control'}, prompt: 'which title?', placeholder: 'which title?',label: false  %>
+        <%= f.input_field :year, input_html: {class: 'chosen-select form-control'}, prompt: '(which year?)', placeholder: 'which year(optional)?',label: false  %>
+
+        <%= f.submit "Search", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+
       <% @usershows.each do |usershow| %>
         <div class="series-card">
           <div class="series-pic"><%= image_tag usershow.show.poster %></div>
@@ -39,9 +51,12 @@
               </div><!--end of modal-dialog-->
             </div><!--end of modal-->
           </div><!--end of series-body-->
-          div.class
-          <div><%= link_to "view show", user_show_path(usershow) %></div>
-          <i data-toggle="modal" data-target="#review-form" class="fa fa-comment-o fa-2x"></i>
+          <div class="series-index-action flex center">
+            <%= link_to user_show_path(usershow) do %>
+            <i class="fa fa-eye fa-2x series-action-icons"></i>
+            <% end %>
+            <a href=""><i data-toggle="modal" data-target="#review-form" class="fa fa-comment-o fa-2x series-action-icons"></i></a>
+          </div>
         </div>
       <% end %>
     </div><!--end of col-xs-12 ; may need to add something to ensure responsive design-->

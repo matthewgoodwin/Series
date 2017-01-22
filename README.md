@@ -1,5 +1,5 @@
 # README
-
+brand colors : rgb(38, 3, 153) and rgb(51, 51, 51)
 when using render with partials is it bad to pass instance variables as stated in the blog post:"Using instance variables in partials complicates the control flow, which facilitates bugs and makes reuse of partials more difficult".. however on the active record documentation:
         http://api.rubyonrails.org/classes/ActionView/PartialRenderer.html
     the examples given pass instance variables and objects in locals.. which is correct??? 

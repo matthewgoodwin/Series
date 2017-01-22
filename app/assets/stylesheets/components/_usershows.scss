@@ -5,10 +5,22 @@
   align-items: center;
   margin: 8px;
   justify-content: space-around;
-  border: 2px solid white;
+  // border: .2px solid white;
   box-shadow: 1.5px 1.5px 9px #888888;
 }
 
 .series-body{
   padding: 10px;
+}
+/* .series-index-action{
+ }*/
+
+.series-action-icons{
+  margin: 5px;
+  }
+a{
+  color: rgb(155,155,155);
+}
+i{
+  color: rgb(155,155,155);
 }

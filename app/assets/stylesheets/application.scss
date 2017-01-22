@@ -15,6 +15,29 @@
 @import "vendor/index";
 
 //aligns items inside the parent div
+*{
+  background-color: rgb(51, 51, 51);
+  color: rgb(200,200,200);
+}
 .margin{
   margin-top: 60px;
+}
+.flex{
+  display: flex;
+}
+
+.search-div{
+  margin: 20px;
+  text-align: center;
+}
+li{
+  list-style: none;
+}
+
+.buffer{
+  margin: 5px;
+}
+.center{
+justify-content: center;
+align-items: center;
 }
