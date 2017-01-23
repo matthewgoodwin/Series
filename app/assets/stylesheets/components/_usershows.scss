@@ -3,10 +3,10 @@
 .series-card{
   display: flex;
   align-items: center;
-  margin: 8px;
+  margin: 20px;
   justify-content: space-around;
   // border: .2px solid white;
-  box-shadow: 1.5px 1.5px 9px #888888;
+  box-shadow: 1.5px 1.5px 10px #999999;
 }
 
 .series-body{
@@ -19,8 +19,10 @@
   margin: 5px;
   }
 a{
-  color: rgb(155,155,155);
+  //same as #999999
+  color: rgb(153,153,153);
 }
 i{
-  color: rgb(155,155,155);
+  //same as #999999
+  color: rgb(153,153,153);
 }
