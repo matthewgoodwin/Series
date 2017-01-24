@@ -38,7 +38,7 @@
             <p><%= usershow.show.summary %></p>
             <p><%= usershow.show.imdb %></p>
             <!--begin modal of review partial-->
-            <div class="modal fade" id="review-form">
+            <div class="modal fade" id="review-form-<%= usershow.show.id %>">
               <div class="modal-dialog" role="document"><!--aligns the modal document-->
                 <div class="modal-content">
                   <div class="modal-header">
@@ -55,10 +55,10 @@
             <%= link_to user_show_path(usershow) do %>
             <i class="fa fa-eye fa-2x series-action-icons"></i>
             <% end %>
-            <a href=""><i data-toggle="modal" data-target="#review-form" class="fa fa-comment-o fa-2x series-action-icons"></i></a>
+            <a href="" data-toggle="modal" data-target="#review-form-<%= usershow.show.id %>" ><i class="fa fa-comment-o fa-2x series-action-icons"></i></a>
           </div>
         </div>
       <% end %>
-    </div><!--end of col-xs-12 ; may need to add something to ensure responsive design-->
-  </div><!--end of row-->
+    <!-- </div>end of col-xs-12 ; may need to add something to ensure responsive design -->
+  <!-- </div>end of row -->
 </div>

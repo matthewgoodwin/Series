@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
   def create
     @review = @usershow.reviews.build(review_params)
     if @review.save
-      render 'user_shows/show'
+      redirect_to user_show_path(@usershow)
       #redirect_to user_shows_path(@usershow)
     else
       render 'user_shows/show'
