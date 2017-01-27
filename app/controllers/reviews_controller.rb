@@ -18,7 +18,8 @@ class ReviewsController < ApplicationController
     # @review = Review.group(:user_show_id).sum(:rating)
     # ^this totals all rating points 1-5
 
-    # @review = Review.group(:user_show_id).where(rating:5).sum(:rating)
+    @reviews = Review.group(:user_show_id).where(rating:5).sum(:rating)
+    raise
     # ^ this totals all ratings where the rating is 5
 
   end
