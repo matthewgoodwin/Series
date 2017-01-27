@@ -19,9 +19,15 @@ class ReviewsController < ApplicationController
     # ^this totals all rating points 1-5
 
     @reviews = Review.group(:user_show_id).where(rating:5).sum(:rating)
-    raise
     # ^ this totals all ratings where the rating is 5
+    # ^^ returns `HASH` @reviews = {key => value} as: {43=>5}
 
+    # @reviews.each do |key,value|
+    #   @usershow = UserShow.find(key)
+    # end
+    # ^ iteration is executed in the view file
+
+    # raise
   end
 
   def show

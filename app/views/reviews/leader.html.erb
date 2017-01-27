@@ -1,4 +1,12 @@
-<%= raise %>
-<% @reviews.each do |top| %>
-
+<!-- now has access to the 'usershow' and 'review' instances from the reviews#leader controller-->
+<!-- iterate through the @reviews `hash` and place `key` in `find` method. This provides access to the proper usershow-->
+<!-- the @reviews `hash` should be in proper order from the controller query-->
+<% @reviews.each do |key,value| %>
+  <% usershow = UserShow.find(key) %>
+  <!--raise here to trouble shoot-->
+    <ul>
+    <li><%= image_tag usershow.show.poster %></li>
+    <li><%= usershow.show.title %></li>
+    <li><%= usershow.show.imdb %></li>
+  </ul>
 <% end %>
