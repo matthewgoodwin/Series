@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     end # end of collection top rated
     resources :reviews, only:[:new, :create, :show, :destroy] do
       collection do
-        get "consistent", to: "reviews#consistent"
+        get "leader", to: "reviews#leader"
       end
     end
   end

@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
   before_action :find_user_show
   before_action :find_review, only: [:consistent, :show, :edit, :update, :destroy]
 
-  def consistent
+  def leader
     # this should be rendered on the user_show top view??
 
     # list of durable series based on number of 4-5 star ratings(king of the hill)
