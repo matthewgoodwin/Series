@@ -3,7 +3,14 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   resources :user_shows, only:[:index,:show,:create,:destroy] do
-    resources :reviews, only:[:new, :create, :show, :destroy]
+    collection do
+      get "top", to: "user_shows#top"
+    end # end of collection top rated
+    resources :reviews, only:[:new, :create, :show, :destroy] do
+      collection do
+        get "consistent", to: "reviews#consistent"
+      end
+    end
   end
   resources :shows, only: [:show]
   get "contact", to: "pages#contact"

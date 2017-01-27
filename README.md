@@ -1,4 +1,10 @@
 # README
+
+Jan28,2017
+helps with activerecord query:
+http://guides.rubyonrails.org/active_record_querying.html#sum
+
+
 brand colors : rgb(255, 237, 48),rgb(255, 158, 40) and rgb(51, 51, 51)
 when using render with partials is it bad to pass instance variables as stated in the blog post:"Using instance variables in partials complicates the control flow, which facilitates bugs and makes reuse of partials more difficult".. however on the active record documentation:
         http://api.rubyonrails.org/classes/ActionView/PartialRenderer.html
