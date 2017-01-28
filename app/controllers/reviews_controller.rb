@@ -4,9 +4,9 @@ class ReviewsController < ApplicationController
 
   def leader
     # this should be rendered on the user_show top view??
-
     # list of durable series based on number of 4-5 star ratings(king of the hill)
     # this is where the top method goes
+    # `group` needs an agregate function
 
     # @review = Review.where(rating: 5).group(:user_show_id).order('count_id desc').count('id')
     # @review = Review.where(rating: 4).group(:user_show_id).order("count_id desc").count("id")
@@ -18,6 +18,12 @@ class ReviewsController < ApplicationController
     # @review = Review.group(:user_show_id).sum(:rating)
     # ^this totals all rating points 1-5
 
+    # @review = Review.where(rating: 5).group(:user_show_id).count(:rating)
+    # ^only counts the number of 5 star ratings per user_show_id
+
+    # @review = Review.where(rating:[5]).group(:user_show_id).limit(3).sum(:rating)
+    # @review = Review.where(rating: 5).group(:user_show_id).sum(:rating)
+    # ^the above two queries are the same as below..
     @reviews = Review.group(:user_show_id).where(rating:5).sum(:rating)
     # ^ this totals all ratings where the rating is 5
     # ^^ returns `HASH` @reviews = {key => value} as: {43=>5}

@@ -1,4 +1,9 @@
 # README
+Jan29,2017
+http://guides.rubyonrails.org/active_record_querying.html#understanding-the-method-chaining
+
+Jan29,2017
+arrays and numbers cant be used for chaining queries in SQL
 
 Jan28,2017
 helps with activerecord query:
