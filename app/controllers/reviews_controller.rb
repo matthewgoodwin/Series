@@ -44,32 +44,35 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = @usershow.reviews.build(review_params)
-    if @review.save
-      redirect_to user_show_path(@usershow)
-      # redirect_to user_shows_path(@usershow)
-    else
-      render 'user_shows/show'
-    end
+  # `@usershow` is carrying the `current_user`
+    # @review = @usershow.reviews.build(review_params)
+    # if @review.save
+    #   redirect_to user_show_path(@usershow)
+    #   # redirect_to user_shows_path(@usershow)
+    # else
+    #   render 'user_shows/show'
+    # end
 
   # setup for ajax:
-  #   @review = @usershow.reviews.build(review_params)
-  #   if @review.save
-  #     respond_to do |format|
-  #       format.html {redirect_to user_show_path(@usershow)}
-  #       # will render `app/views/reviews/create.js.erb`
-  #       format.js
-  #     # end of the respond_to do
-  #     end
-  #   else
-  #     respond_to do |format|
-  #       format.html {render 'user_shows/show'}
-  #       # will render `idem`
-  #       format.js
-  #     # end of the respond_do
-  #     end
-  #   # end of `if` statement
-  #   end
+  # `@usershow` is carrying the `current_user`
+    @review = @usershow.reviews.build(review_params)
+    if @review.save
+      respond_to do |format|
+        format.html {redirect_to user_show_path(@usershow)}
+        # will render `app/views/reviews/create.js.erb`
+        format.js
+      # end of the respond_to do
+      end
+    else
+      respond_to do |format|
+        format.html {render 'user_shows/show'}
+        # will render `idem`
+        format.js
+      # end of the respond_do
+      end
+    # end of `if` statement
+    end
+
   end # end of create
 
   def edit

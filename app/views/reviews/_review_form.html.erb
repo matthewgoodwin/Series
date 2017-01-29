@@ -1,5 +1,5 @@
 
-<%= simple_form_for ([usershow, review]) do |f| %>
+<%= simple_form_for ([usershow, review], remote: true) do |f| %>
   <!--add raise here to inspect-->
   <%= f.input_field :phrase, label: false, placeholder: 'short review' %>
   <%= f.input_field :rating, label: false, placeholder: '1-5'  %>
