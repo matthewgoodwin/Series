@@ -1,4 +1,9 @@
 # README
+Jan30,2017
+//var latest_rev = $("<h4>latest review:</h4><p> <%= j usershow.reviews.last.standout %>: <%= j usershow.reviews.last.phrase  %> </p>");
+// ^ the above needs to be rendered from a partial, like the 'show' page
+//$('.latest-review').append(latest_rev);
+
 Jan29,2017
 http://guides.rubyonrails.org/active_record_querying.html#understanding-the-method-chaining
 

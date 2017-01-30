@@ -1,0 +1,12 @@
+<div class="usershow-index-reviews-div">
+  <% if usershow.reviews.blank?  %>
+  <% else %>
+    <div class="latest-review">
+    <h4>latest review:</h4>
+    <p>
+      <%= usershow.reviews.last.standout %>:
+      "<%= usershow.reviews.last.phrase  %>"
+    </p>
+    </div>
+  <% end %>
+</div>

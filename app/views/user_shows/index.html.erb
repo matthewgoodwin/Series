@@ -22,18 +22,7 @@
           <div class="series-body">
             <h3><%= usershow.show.title %></h3>
 
-            <div class="usershow-index-reviews-div">
-              <% if usershow.reviews.blank?  %>
-              <% else %>
-                <div class="latest-review">
-                <h4>latest review:</h4>
-                <p>
-                  <%= usershow.reviews.last.standout %>:
-                  "<%= usershow.reviews.last.phrase  %>"
-                </p>
-                </div>
-              <% end %>
-            </div>
+            <%= render "reviews/latest_review", usershow: usershow %>
 
             <p><%= usershow.show.summary %></p>
             <p><%= usershow.show.imdb %></p>
