@@ -1,4 +1,19 @@
 # README
+Jan31,2017
+_show.html.erb(review partial)
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <div class="reviews-show">
+        <h3><%= review.standout %></h3>
+        <h4>"<%= review.phrase %>"</h4>
+        <p>rating: <%= review.rating %></p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
 Jan30,2017
 //var latest_rev = $("<h4>latest review:</h4><p> <%= j usershow.reviews.last.standout %>: <%= j usershow.reviews.last.phrase  %> </p>");
 // ^ the above needs to be rendered from a partial, like the 'show' page
