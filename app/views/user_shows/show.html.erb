@@ -4,10 +4,10 @@
 <p>Find me in app/views/user_shows/show.html.erb</p>
 
 
-    <div class="col-xs-12 col-sm-8">
+    <div class="col-xs-12 col-sm-6">
       <p><%= link_to "back to index", user_shows_path %></p>
       <div class="user-show-show-div">
-        <%= image_tag @usershow.show.poster %>
+        <%= image_tag @usershow.show.lgposter, class: "imgc" %>
         <%= @usershow.show.title %>
         <div>
       <i data-toggle="modal" data-target="#review-form" class="fa fa-comment-o fa-2x"></i>
@@ -17,8 +17,8 @@
       </div><!--end of user-show-div-->
     </div><!-- end of col xs12 col sm8-->
 
-    <div class="col-xs-12 col-sm-4">
-      <div id="usershow-index-reviews-div">
+    <div class="col-xs-12 col-sm-6">
+      <div id="usershow-show-reviews-div">
         <% if @usershow.reviews.blank?  %>
         <% else %>
         <% @usershow.reviews.each do |review|  %>
@@ -29,7 +29,7 @@
     </div><!-- end of col xs12 col sm4-->
 
 
-<div class="modal fade review-mod-style"" id="review-form">
+<div class="modal fade review-mod-style" id="review-form">
   <div class="modal-dialog" role="document"><!--aligns the modal document-->
     <div class="modal-content">
       <div class="modal-header">

@@ -1,7 +1,14 @@
 <!--appears on the user_show `show` page-->
 <div class="reviews-show">
-  <h3><%= review.standout %></h3>
+  <h4><%= review.standout %></h4>
   <p>"<%= review.phrase %>"</p>
-  <p>rating: <%= review.rating %></p>
+  <p>
+    <% review.rating.to_i.times do %>
+      <i class="fa fa-star yellow-star"></i>
+    <% end %>
+    <% (5 - review.rating.to_i).times do %>
+      <i class="fa fa-star grey-star"></i>
+    <% end %>
+  </p>
 </div>
 

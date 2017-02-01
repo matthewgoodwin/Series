@@ -22,7 +22,9 @@
           <div class="series-body">
             <h3><%= usershow.show.title %></h3>
 
-            <%= render "reviews/latest_review", usershow: usershow %>
+            <div class="usershow-index-reviews-div">
+            <%= render "reviews/latest_review", usershow: usershow, review: @review %>
+            </div>
 
             <p><%= usershow.show.summary %></p>
             <p><%= usershow.show.imdb %></p>
