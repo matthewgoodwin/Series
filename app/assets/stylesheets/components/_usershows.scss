@@ -28,6 +28,38 @@ i{
 }
 
 .imgc{
-  height: 400px;
+  height: 900px;
   width: auto;
 }
+
+.user-show-lgposter-div{
+  background-size: cover !important;
+  // height: calc(100vh - 70px);
+  height: 90vh;
+  justify-content: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  position: relative;
+}
+#usershow-show-reviews-div{
+
+}
+#user-show-show-content{
+  // position: absolute;
+  bottom: 100px;
+  // margin: 10px;
+  background-position: center;
+  padding: 15px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  font-size: 12px;
+
+}
+#user-show-show-content-summary{
+  color: white;
+}
+.user-show-show-action-icons{
+  display: flex;
+  justify-content: space-around;
+}
+

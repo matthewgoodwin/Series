@@ -1,4 +1,9 @@
 # README
+feb2, 2017
+
+<%= link_to "leaders", leader_user_show_reviews_path(@usershow) %>
+<h4><%= link_to "back to index", user_shows_path %></h4>
+
 Jan31,2017
 _show.html.erb(review partial)
 <!-- <div class="container">

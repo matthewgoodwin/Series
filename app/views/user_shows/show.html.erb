@@ -1,23 +1,36 @@
 <div class="container">
 <div class="row">
-<h1>UserShows#show</h1>
-<p>Find me in app/views/user_shows/show.html.erb</p>
-
-
-    <div class="col-xs-12 col-sm-6">
-      <p><%= link_to "back to index", user_shows_path %></p>
+  <div class="col-xs-12 col-sm-6">
+    <div class="user-show-lgposter-div" style="background-image: url(<%= image_path @usershow.show.lgposter %>);">
+    <!--^ `image_path` will be replaced by `image_tag` when pulling form the backend-->
+      <h1>UserShows#show</h1>
+      <p>Find me in app/views/user_shows/show.html.erb</p>
       <div class="user-show-show-div">
-        <%= image_tag @usershow.show.lgposter, class: "imgc" %>
         <%= @usershow.show.title %>
-        <div>
-      <i data-toggle="modal" data-target="#review-form" class="fa fa-comment-o fa-2x"></i>
-      </div>
-      <%= link_to "leaders", leader_user_show_reviews_path(@usershow) %>
-        <p><%= @usershow.show.summary %></p>
-      </div><!--end of user-show-div-->
-    </div><!-- end of col xs12 col sm8-->
+          <div>
+        <i data-toggle="modal" data-target="#review-form" class="fa fa-comment-o fa-2x"></i>
+        </div>
 
+
+      </div><!--end of user-show-div-->
+    </div><!--end of user-show-lgposter div-->
+
+    </div><!-- end of col xs12 col sm8-->
     <div class="col-xs-12 col-sm-6">
+      <div id="user-show-show-content">
+        <h4><%= @usershow.show.title %></h4>
+        <p id="user-show-show-content-summary"><%= @usershow.show.summary %></p>
+        <div class="user-show-show-action-icons">
+          <%= link_to user_shows_path do %>
+            <i class="fa fa-caret-left fa-2x series-action-icons"></i>
+          <% end %>
+          <i data-toggle="modal" data-target="#review-form" class="fa fa-comment-o fa-2x series-action-icons"></i>
+          <%= link_to leader_user_show_reviews_path(@usershow) do %>
+            <i class="fa fa-trophy fa-2x series-action-icons"></i>
+          <% end %>
+        </div>
+      </div>
+
       <div id="usershow-show-reviews-div">
         <% if @usershow.reviews.blank?  %>
         <% else %>
